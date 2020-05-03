@@ -19,6 +19,7 @@ function main()
     renderer.setSize(WIDTH, HEIGHT);
     document.body.appendChild(renderer.domElement);
 
+    //POINTS
     var particles = new THREE.Geometry();
     var particleNumb = 200;
     for(let i = 0; i < particleNumb; i++)
@@ -40,10 +41,30 @@ function main()
 
     scene.add(points);
 
+
+    // SPRITE
+    // scene.fog = new THREE.FogExp2( 	0xFF0000, 0.0008 );
+    // var spriteMaterial = new THREE.SpriteMaterial( { 
+    //     color: 0xffffff,
+    //     fog: true,
+    //     rotation: 0,
+    //     sizeAttenuation: true ,
+    // } );
+    // group = new THREE.Group();
+    // for(var x=0;x<200;x++){
+    //     var sprite = new THREE.Sprite(spriteMaterial);
+    //     sprite.position.set(Math.random() * 500 - 250, Math.random() * 500 - 250, Math.random() * 500 - 250);
+    //     //sprite.scale.set(5, 5, 5);
+    //     group.add(sprite)
+    // }
+    // scene.add(group);
+
     function render()
     {
         requestAnimationFrame(render);
-        points.rotation.y -= 0.01;
+        points.rotation.y -= 0.01; // POINTS
+
+        //group.rotation.y -= 0.01// SPRITE
         renderer.render(scene, camera);
     }
 
