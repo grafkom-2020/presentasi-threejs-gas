@@ -45,6 +45,10 @@ function main()
     gui.add(controls, 'particleNumb', 100, 10000).onChange(controls.redraw);
     gui.add(controls, 'useSprites').onChange(controls.redraw);
 
+    // performance monitor
+    var stats = new Stats();
+    document.body.appendChild( stats.dom );
+
     var points, group;
 
     //POINTS
@@ -101,6 +105,7 @@ function main()
         else points.rotation.y -= 0.01; // POINTS
 
         renderer.render(scene, camera);
+        stats.update();
     }
 
     render();
