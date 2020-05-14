@@ -17,3 +17,7 @@ Perbedaan kinerja antara penggunaan point cloud dan sprite pada pergerakan parti
 
 ### Sprite FPS
 ![PC FPS](readme-assets/spriteFPS.png)
+
+
+## Particle menggunakan video
+![Vid](readme-assets/video-as-particles.gif)
